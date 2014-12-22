@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(opencvtutorials)
+
+## Find catkin macros and libraries
+## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+## is used, also find other catkin packages
+find_package(catkin REQUIRED COMPONENTS
+  
+  image_transport
+  roscpp
+  sensor_msgs
+  std_msgs
+  OpenCV REQUIRED COMPONENTS
+   cv_bridge
+)
+
+include_directories(  ${catkin_INCLUDE_DIRS}  ${OpenCV_INCLUDE_DIRS} )
+add_library(slic /home/iiith/catkin_ws/src/opencvtutorials/src/slic.cpp)
+##add_library(maxflow MarkovModule/maxflow.cpp)
+add_executable(superpixel src/superpixel.cpp )
+target_link_libraries (superpixel slic  ${OpenCV_LIBRARIES} ${catkin_LIBRARIES} )
