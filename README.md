@@ -7,3 +7,4 @@ The images below shows an example of an over-segmentation using 400 superpixels 
   <img src="https://github.com/PSMM/SLIC-Superpixels/blob/master/dog.png?raw=true" alt="Dog"/>
   <img src="https://github.com/PSMM/SLIC-Superpixels/blob/master/dog_segmentation.png?raw=true" alt="Dog Segmentation"/>
 </p>
+</br> get https://github.com/berak/SLIC-Superpixels for opencv 3.0 </br>
